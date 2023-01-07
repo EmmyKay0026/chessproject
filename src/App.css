@@ -1,3 +1,65 @@
-:root{
-  --default-brown:#CBAF85;
+:root {
+  --default-brown: #cbaf85;
+  --default-dark-brown: #e29e38;
+  --default-semi-dark-brown: #cbaf85;
+  --default-white: #ffffff;
+  --font-lg: 30px;
+  --font-xlg-weight: 700;
+  --font-lg-weight: 600;
+  --font-family-poppins: "Poppins", sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0px;
+  margin: 0px;
+  font-family: var(--font-family-poppins);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  padding: 0px;
+  margin: 0px;
+}
+
+/* landing page */
+.landing-bg {
+  background-image: url(../src/assets/pexels-rūdolfs-klintsons-7060437\ 1.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 98vh;
+}
+
+.knight-section {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 63px;
+  padding-top: 50px;
+}
+
+.knight-section-left {
+  width: 42%;
+  padding-top: 20px;
+}
+
+.knight-section-h1 {
+  font-size: var(--font-lg);
+  color: var(--default-white);
+  font-weight: 500;
+  font-size: var(--font-lg);
+  line-height: 58px;
+}
+
+.knight-money {
+  font-size: 36px;
+  color: var(--default-dark-brown);
+}
+
+.knight-chance {
+  font-size: 36px;
+  color: var(--default-semi-dark-brown);
 }
