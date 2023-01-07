@@ -1,11 +1,11 @@
-import './App.css';
-import { PageTemplate } from './component';
+import "./App.css";
+import { LandingPage } from "./component/pages";
 
 function App() {
   return (
-    <PageTemplate>
-      Home
-    </PageTemplate>
+    <>
+      <LandingPage />
+    </>
   );
 }
 
