@@ -1,10 +1,11 @@
 :root {
   --default-brown: #cbaf85;
-  --default-semi-light-brown: #EBD5B3;
+  --default-semi-light-brown: #ebd5b3;
   --default-dark-brown: #e29e38;
   --default-semi-dark-brown: #cbaf85;
   --default-white: #ffffff;
-  --font-lg: 30px;
+  --font-lg: 29px;
+  --font-sm: 13px;
   --font-xlg-weight: 700;
   --font-lg-weight: 600;
   --font-family-poppins: "Poppins", sans-serif;
@@ -16,7 +17,7 @@
   margin: 0px;
   font-family: var(--font-family-poppins);
 }
-[class$='btn'] {
+[class$="btn"] {
   cursor: pointer;
 }
 
@@ -31,7 +32,7 @@ p {
 }
 
 /* NavBar */
-nav{
+nav {
   position: absolute;
   width: 100vw;
   height: 80px;
@@ -46,66 +47,66 @@ nav{
   gap: 10px;
   padding: 15px 63px;
 }
-.compy-logo{
+.compy-logo {
   /* width: 242px;
   height: 48px; */
   /* line-height: 48px; */
   font-size: 32px;
   font-weight: var(--font-lg-weight);
 }
-.rite-nav{
+.rite-nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
-.md-nav{
+.md-nav {
   display: flex;
   justify-content: space-between;
   margin-top: 10px;
   margin-right: 30px;
 }
-.md-nav li{
+.md-nav li {
   list-style: none;
   font-size: 20px;
   font-weight: 400;
   margin-right: 31px;
 }
-.srch-btn{
+.srch-btn {
   font-size: 1.5rem !important;
 }
-.nav-btn{
+.nav-btn {
   padding: 8px 26px;
   font-size: 20px;
   border-radius: 10px;
   border: 0;
 }
-.bwn-btn{
+.bwn-btn {
   background-color: var(--default-semi-light-brown);
-  color: #1B1B1B;
+  color: #1b1b1b;
   margin-right: 58px;
 }
-.blk-btn{
+.blk-btn {
   background-color: #151515;
   color: var(--default-semi-light-brown);
 }
 
-/* landing page */
+/* landing page knight section */
 .landing-bg {
   background-image: url(../src/assets/pexels-rūdolfs-klintsons-7060437\ 1.png);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 98vh;
+  height: 100vh;
 }
 
 .knight-section {
   display: flex;
   justify-content: space-between;
   padding: 0 63px;
-  padding-top: 50px;
+  padding-top: 114px;
 }
 
 .knight-section-left {
-  width: 42%;
+  width: 39%;
   padding-top: 20px;
 }
 
@@ -114,15 +115,50 @@ nav{
   color: var(--default-white);
   font-weight: 500;
   font-size: var(--font-lg);
-  line-height: 58px;
+  line-height: 52px;
 }
 
 .knight-money {
-  font-size: 36px;
+  font-size: 32px;
   color: var(--default-dark-brown);
 }
 
 .knight-chance {
   font-size: 36px;
   color: var(--default-semi-dark-brown);
+}
+
+/* landing page play section */
+.play-section {
+  padding: 0 63px;
+  padding-top: 6px;
+}
+.play-1 {
+  display: flex;
+}
+
+.games-today {
+  font-size: var(--font-sm);
+  color: var(--default-white);
+}
+
+.pg-1 {
+  margin-top: -3.2rem;
+  margin-left: 2rem;
+}
+.pg-2 {
+  margin-top: -4.4rem;
+  margin-left: 2.9rem;
+}
+
+.rook {
+  /* border: 1px solid red; */
+  margin-top: -3.6rem;
+  margin-left: -3.7rem;
+}
+
+.trophy {
+  /* border: 1px solid red; */
+  margin-top: -0.8rem;
+  margin-left: -1.5rem;
 }
