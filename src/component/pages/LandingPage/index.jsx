@@ -1,5 +1,5 @@
 import React from "react";
-import { KnightBoard } from "../../molecules/KnightBoard";
+import { PlayGame, KnightBoard } from "../../molecules";
 import { PageTemplate } from "../../templates/Pagetemplates";
 
 export const LandingPage = () => {
@@ -8,6 +8,7 @@ export const LandingPage = () => {
       <PageTemplate>
         <div className="landing-bg">
           <KnightBoard />
+          <PlayGame />
         </div>
       </PageTemplate>
     </>
