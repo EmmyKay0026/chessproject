@@ -1,5 +1,6 @@
 import React from "react";
 import { Button, Text } from "../../atoms";
+import search from "../../../assets/search.svg";
 
 export const NavBar = () => {
   return (
@@ -16,7 +17,9 @@ export const NavBar = () => {
             <li>Live games</li>
             <li>Puzzles</li>
             <li>News</li>
-            <li className="srch-btn">Q</li>
+            <li className="srch-btn">
+              <img src={search} alt="search" />
+            </li>
           </ul>
         </div>
         <div>
