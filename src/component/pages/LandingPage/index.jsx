@@ -4,7 +4,12 @@ import { PageTemplate } from "../../templates/Pagetemplates";
 export const LandingPage = () => {
   return (
     <>
-      <PageTemplate></PageTemplate>
+      <PageTemplate>
+        <div className="landing-bg">
+          <KnightBoard />
+          <PlayGame />
+        </div>
+      </PageTemplate>
     </>
   );
 };
