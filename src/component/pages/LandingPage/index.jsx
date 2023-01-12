@@ -1,6 +1,6 @@
 import React from "react";
-import { PlayGame, KnightBoard } from "../../molecules";
 import { PageTemplate } from "../../templates/Pagetemplates";
+import { KnightBoard, PlayGame } from "../../molecules";
 
 export const LandingPage = () => {
   return (
