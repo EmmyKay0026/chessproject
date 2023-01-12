@@ -4,8 +4,10 @@
   --default-dark-brown: #e29e38;
   --default-semi-dark-brown: #cbaf85;
   --default-white: #ffffff;
+  --default-black: #151515;
   --font-lg: 29px;
   --font-sm: 13px;
+  --font-m: 14px;
   --font-xlg-weight: 700;
   --font-lg-weight: 600;
   --font-family-poppins: "Poppins", sans-serif;
@@ -100,7 +102,7 @@ nav {
   background-image: url(../src/assets/pexels-rūdolfs-klintsons-7060437\ 1.png);
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  height: 100%;
 }
 
 .knight-section {
@@ -111,7 +113,7 @@ nav {
 }
 
 .knight-section-left {
-  width: 39%;
+  width: 40%;
   padding-top: 20px;
 }
 
@@ -137,7 +139,11 @@ nav {
 .play-section {
   padding: 0 63px;
   padding-top: 6px;
+  padding-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
 }
+
 .play-1 {
   display: flex;
 }
@@ -145,14 +151,16 @@ nav {
 .games-today {
   font-size: var(--font-sm);
   color: var(--default-white);
+  font-weight: 300;
 }
 
 .pg-1 {
   margin-top: -3.2rem;
   margin-left: 2rem;
 }
+
 .pg-2 {
-  margin-top: -4.4rem;
+  margin-top: -4.3rem;
   margin-left: 2.9rem;
 }
 
@@ -166,4 +174,118 @@ nav {
   /* border: 1px solid red; */
   margin-top: -0.8rem;
   margin-left: -1.5rem;
+}
+
+.help,
+.about {
+  border: none;
+  background-color: transparent;
+}
+
+.about {
+  padding-top: 0.5rem;
+}
+
+.s-btn {
+  font-size: 18px;
+  font-weight: 300;
+  color: var(--default-white);
+  padding-left: 5px;
+  font-family: var(--font-family-poppins);
+}
+
+.s-1 {
+  padding-left: 12px;
+}
+
+.help-btn {
+  padding-top: 10rem;
+}
+
+.bot-btn-1 {
+  padding-top: 8rem;
+}
+
+.bot-btn-3 {
+  padding-top: 1rem;
+}
+
+.img-btn {
+  position: relative;
+  top: 0.1rem;
+}
+
+.knight-bot-btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 10px;
+  gap: 40px;
+  background-color: var(--default-white);
+  border-radius: 1rem;
+  width: 440px;
+  height: 111px;
+}
+
+.bot-h2 {
+  font-size: 30px;
+  color: var(--default-black);
+  font-family: var(--font-family-poppins);
+  font-weight: 700;
+  text-align: start;
+}
+
+.bot-h3 {
+  font-size: 20px;
+  color: var(--default-black);
+  font-family: var(--font-family-poppins);
+  font-weight: 400;
+  text-align: start;
+}
+
+.play-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 15px;
+  grid-row-gap: 0px;
+}
+
+.rooks-bot {
+  background-color: var(--default-brown);
+}
+
+.bot-help {
+  display: none;
+}
+
+@media screen and (max-width: 1130px) {
+
+  /* landing page play section */
+  .play-container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .play-game-left {
+    width: 100%;
+  }
+
+  .help-btn {
+    display: none;
+  }
+
+  .bot-help {
+    display: block;
+  }
+
+  .bot-btn-1 {
+    padding-top: 4rem;
+  }
+}
+
+@media screen and (max-width: 1029px) {
+  /* landing page play section */
 }
