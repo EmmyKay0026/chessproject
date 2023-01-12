@@ -36,7 +36,7 @@ p {
 /* NavBar */
 nav {
   position: absolute;
-  width: 100vw;
+  width: 100%;
   height: 80px;
   left: 0px;
   top: 0px;
@@ -196,7 +196,6 @@ nav {
 .about {
   padding-top: 0.5rem;
 }
-
 .s-btn {
   font-size: 18px;
   font-weight: 300;
@@ -405,8 +404,8 @@ nav {
 .signup-opt span{
   color: var(--default-dark-brown);
 }
-@media screen and (max-width: 1130px) {
 
+  @media screen and (max-width: 1130px) {
   /* landing page play section */
   .play-container {
     display: flex;
@@ -421,11 +420,9 @@ nav {
   .help-btn {
     display: none;
   }
-
   .bot-help {
     display: block;
   }
-
   .bot-btn-1 {
     padding-top: 4rem;
   }
@@ -434,7 +431,6 @@ nav {
 @media screen and (max-width: 1029px) {
   /* landing page play section */
 }
-
 /* Tablet Screen */
 @media screen and (max-width: 768px) {
   /* NavBar */
