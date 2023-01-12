@@ -1,16 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { Button, Text } from "../../atoms";
+import { Button, Logo } from "../../atoms";
+import { MobNavBar } from "../../molecules";
 import search from "../../../assets/searchvector.svg";
 
 export const NavBar = () => {
   return (
     <nav>
-      <div>
-        <Text type="h2" className="compy-logo">
-          Company logo
-        </Text>
-      </div>
+      <Logo />
       <div className="rite-nav">
         <div>
           <ul className="md-nav">
@@ -40,10 +37,15 @@ export const NavBar = () => {
           </ul>
         </div>
         <div>
-          <Button className="nav-btn bwn-btn" children="Sign up" />
-          <Button className="nav-btn blk-btn" children="Sign in" />
+          <Link to="/signup">
+            <Button className="nav-btn bwn-btn" children="Sign up" />
+          </Link>
+          <Link to="/signin">
+            <Button className="nav-btn blk-btn" children="Sign in" />
+          </Link>
         </div>
       </div>
+      <MobNavBar />
     </nav>
   );
 };

@@ -1,6 +1,6 @@
 import "./App.css";
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
-import { LandingPage,LiveGames,News,Play,Puzzles } from "./component/pages";
+import { LandingPage,LiveGames,News,Play,Puzzles,SignIn } from "./component/pages";
 
 function App() {
   return (
@@ -11,6 +11,7 @@ function App() {
         <Route exact path ='/news' element ={<News />}/>
         <Route exact path ='/play' element ={<Play />}/>
         <Route exact path ='/puzzles' element ={<Puzzles />}/>
+        <Route exact path ='/signin' element ={<SignIn />}/>
       </Routes>
     </BrowserRouter>
   );

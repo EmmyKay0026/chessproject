@@ -16,6 +16,9 @@ export const Text = ({ className, type, children }) => {
   if (type === "h5") {
     return <h5 className={className}>{children}</h5>;
   }
+  if (type === "p") {
+    return <p className={className}>{children}</p>;
+  }
 
   return <span className={className}>{children}</span>;
 };
