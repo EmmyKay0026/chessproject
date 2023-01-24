@@ -22,7 +22,9 @@
 [class$="btn"] {
   cursor: pointer;
 }
-
+a{
+  text-decoration: none;
+}
 h1,
 h2,
 h3,
@@ -31,6 +33,12 @@ h5,
 p {
   padding: 0px;
   margin: 0px;
+}
+.em-inp input:-internal-autofill-selected {
+  background-color: #645d5d2b !important;
+}
+.wid-100{
+  width:100%
 }
 
 /* NavBar */
@@ -294,8 +302,8 @@ nav {
   background-color: #645d5d2b;
   border: 1px solid #fceaea6e;
   border-radius: 10px;
-  width: 345px;
-  height: 38px;
+  /* width: 345px;
+  height: 38px; */
   padding: 8px ;
   margin-bottom: 20px;
 }
@@ -305,13 +313,17 @@ nav {
   margin-right: 21px;
   margin-left: 5px;
 }
+.em-inp{
+  width: 80%;
+}
 .inpt-div-cont input{
   background-color: transparent;
   color: #A7A39C;
   border: 0;
   outline: none;
+  width: 100%;
 }
-.inpt-div-cont input::placeholder{
+.inpt-div-cont input, .inpt-div-cont input::placeholder{
   font-weight: 600;
   font-size: 16px;
   color: #A7A39C;
@@ -322,8 +334,12 @@ nav {
   align-items: center;
   width: 100%;
 }
+.pw-input input{
+  width: 90%;
+}
 .pw-input .icon-cont{
   margin: 0;
+  cursor: pointer;
 }
 .oder-form-cont{
   display: flex;
@@ -352,6 +368,7 @@ nav {
   background-color: var(--default-brown);
   color: #181715;
   border: 0;
+  width: 100%;
 }
 .or-hr{
   display: flex;
@@ -365,7 +382,7 @@ nav {
 }
 .wit-hr{
   border: 1px solid white;
-  width: 139px;
+  width: 40%;
 }
 .signin-wit-btn{
   display: flex;
@@ -375,15 +392,17 @@ nav {
   margin-bottom: 20px;
 }
 .signin-wit-btn div{
-  margin-right: 40px;
+  margin-right: 20px;
   padding-top: 6px;
+  display: flex;
 }
-.signin-wit-btn button{
+.signin-wit-btn button,.signup-wit-btn button{
   border: 0;
   background-color: transparent;
   font-size: 18px;
   font-weight: var(--font-lg-weight);
   text-decoration: none;
+  cursor: pointer;
 }
 .white-btn{
   background-color: white;
@@ -391,7 +410,9 @@ nav {
 .blue-btn{
   background-color: #3B5998;
   color: white;
-  text-decoration: none;
+}
+.blue-btn button{
+  font-size: 17px !important;
 }
 .black-btn{
   color: white;
@@ -401,10 +422,99 @@ nav {
   color: white;
   font-weight: var(--font-lg-weight);
 }
-.signup-opt span{
+.signup-opt span,.signin-opt span,.signin-opt-ald span{
   color: var(--default-dark-brown);
 }
-
+/* Sign Up page */
+.signup-form{
+  background-color: var(--default-black);
+  width: 616px;
+  height: 952px;
+  margin-top: 18px;
+  padding: 14px 44px 26px;
+} 
+.skil-icon-cont{
+  display: flex;
+  justify-content: space-between;
+}
+.skil-icon{
+  background-color: #222222;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 113px;
+  height: 94px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.skil-icon p{
+  padding-top: 5px;
+  color: var(--default-dark-brown);
+  font-size: var(--font-m);
+}
+.jin-nw{
+  text-align: center;
+  color: white;
+  font-size: 36px;
+  font-weight: 700;
+  line-height: 54px;
+  margin-bottom:20px;
+}
+.mailicon{
+  width: 30px !important;
+  height: 27px !important;
+}
+.skil-text{
+  color: var(--default-brown);
+  font-size: 20px;
+  text-align: center;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+.signup-mar-top{
+  margin-top: 53px;
+}
+.signup-wit-btn {
+  display: grid;
+  grid-template-columns: 18% 70% 5%;
+  padding: 10px 40px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+}
+.signup-wit-btn div {
+  margin-right: 20px;
+  padding-top: 6px;
+  display: flex;
+}
+.signup-wit-btn div {
+  margin-right: 45px;
+  /* padding-top: 6px; */
+  display: flex;
+}
+.signin-opt-ald{
+  color: #A7A39C !important;
+  margin-bottom: 20px;
+}
+.signin-opt{
+  width: 90%;
+}
+.signin-opt, .signin-opt-ald {
+  color: white;
+  font-weight: var(--font-lg-weight);
+  font-size: 18px;
+  text-align: center;
+}
+.test-radio{
+  display: none;
+}
+.test-radio+label{
+  border: 1px solid #151515 ;
+}
+.test-radio:checked+label {
+  border:1px solid #CBAF85 ;
+  border-radius: 10px;
+}
   @media screen and (max-width: 1130px) {
   /* landing page play section */
   .play-container {

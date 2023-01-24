@@ -9,6 +9,8 @@ export const Input = ({
   className,
   value,
   onChange,
+  password,
+  checked,
 }) => {
   if (type === "textarea") {
     return <textarea className={className} name={name} />;
@@ -16,23 +18,33 @@ export const Input = ({
 
   if (type === "checkbox") {
     return (
-      <input
-        className={className}
-        type="checkbox"
-        name={name}
-        placeholder={placeholder}
-      />
+      <>
+        <label>{label}</label>
+        <input
+          className={className}
+          type="checkbox"
+          name={name}
+          id={id}
+          placeholder={placeholder}
+        />
+      </>
     );
   }
 
   if (type === "radio") {
     return (
-      <input
-        className={className}
-        type="radio"
-        name={name}
-        placeholder={placeholder}
-      />
+      <>
+        <label>{label}</label>
+        <input
+          className={className}
+          type="radio"
+          name={name}
+          placeholder={placeholder}
+          checked={checked}
+          id={id}
+          onChange={onChange}
+        />
+      </>
     );
   }
   if (type === "password") {
@@ -40,11 +52,12 @@ export const Input = ({
       <input
         className={className}
         id={id}
-        type="pasword"
+        type={password}
         name={name}
         placeholder={placeholder}
         value={value}
         onChange={onChange}
+        required
       />
     );
   }
@@ -58,6 +71,23 @@ export const Input = ({
         placeholder={placeholder}
         value={value}
         onChange={onChange}
+        autoComplete="off"
+        required
+      />
+    );
+  }
+  if (type === "username") {
+    return (
+      <input
+        className={className}
+        id={id}
+        type="text"
+        name={name}
+        placeholder={placeholder}
+        value={value}
+        onChange={onChange}
+        autoComplete="off"
+        required
       />
     );
   }
