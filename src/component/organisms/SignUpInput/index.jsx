@@ -1,7 +1,9 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { Link, useNavigate } from "react-router-dom";
+import { loginAsync } from "../../../store/features/auth/authSlice";
 import { Input, Text, Button } from "../../atoms";
-import { globalAxios } from "../../../store/features/auth/authAPI";
+// import { globalAxios } from "../../../store/features/auth/authAPI";
 // import { PwInput, SignupBtns } from "../../molecules";
 import usericon from "../../../assets/usericon.svg";
 import pwlock from "../../../assets/PWlock.svg";
@@ -15,8 +17,10 @@ import queenIcon from "../../../assets/signupqueen.svg";
 // import axios from "axios";
 
 export const SignUpInput = () => {
+  const navigate = useNavigate();
+  const dispatch = useDispatch();
   const initialData = {
-    userName: "",
+    username: "",
     email: "",
     password: "",
   };
@@ -37,14 +41,27 @@ export const SignUpInput = () => {
   };
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log(formValues);
+    dispatch(loginAsync(formValues));
+    navigate("/profile");
+    // try {
+    //   const response = await globalAxios("/signup", {
+    //     method: "POST",
+    //     headers: { "Content-Type": "application/json" },
+    //     body: JSON.stringify({ formValues }),
+    //   });
+    //   const data = await response.json();
+    //   if (data.token) {
+    //     localStorage.setItem("token", data.token);
+    //   }
+    // } catch (err) {
+    //   console.log("err");
+    // }
     setFormValues(initialData);
-    try {
-      const response = await globalAxios.post("/signup", JSON.stringify({}));
-    } catch (err) {}
   };
+
   const handleChange = (e) =>
     setFormValues((prev) => {
-      console.log(e.target.value);
       return {
         ...prev,
         [e.target.name]: e.target.value,
@@ -62,7 +79,7 @@ export const SignUpInput = () => {
             placeholder="Username"
             id="username"
             name="username"
-            value={formValues.firstName}
+            value={formValues.username}
             onChange={handleChange}
           />
         </div>
